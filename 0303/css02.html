@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2일차 2번</title>
+</head>
+    <style>
+        #div01 .float1 > img { float: left; }
+        #div01 .float2 > img { float: right; }
+        #div01 .left { float: left; }
+        #div01 .right { float: right; }
+
+        #div01 .size { width: 100px; }
+
+        #div01 .box {
+            width: 100px;
+            height: 100px;
+            border: 1px solid black;
+            margin: 5px;
+        }
+
+        #div02 .noclearfix, #div02 .clearfix {
+            border: 3px solid black;
+            padding: 5px;
+        }
+
+        /* 만약 float을 사용해야 할 경우 아래와 같이 부모 태그에 ::after 선택자를 사용하여 float을 clear해야 함*/
+        /*  1. 부모 태그 아래 자식 태그가 float 사용 2. 부모 태그에 ::after */
+
+        #div02 img { float: right; }
+
+        #div02 .clearfix::after {
+            content: "";
+            clear: both;
+            display: block;
+        }
+
+    </style>
+<body>
+    <div id="div01">
+        <div>
+            <img src="002.jpg" alt="">
+            <p>동구리 is.. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias voluptate doloremque quas magnam distinctio adipisci. Reiciendis similique asperiores nulla accusantium nobis sed quod, sint officia, voluptas quas ipsum impedit quae.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, laudantium sed laborum aliquid incidunt dicta qui vitae repellendus quam, voluptatum dolorum labore consectetur, necessitatibus aspernatur provident inventore ipsam veniam aliquam.</p>
+        </div>
+        <div class="float1">
+            <img src="002.jpg" alt="">
+            <p>동구리 is.. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias voluptate doloremque quas magnam distinctio adipisci. Reiciendis similique asperiores nulla accusantium nobis sed quod, sint officia, voluptas quas ipsum impedit quae.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, laudantium sed laborum aliquid incidunt dicta qui vitae repellendus quam, voluptatum dolorum labore consectetur, necessitatibus aspernatur provident inventore ipsam veniam aliquam.</p>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br>
+        <div class="float2">
+            <img src="002.jpg" alt="">
+            <p>동구리 is.. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias voluptate doloremque quas magnam distinctio adipisci. Reiciendis similique asperiores nulla accusantium nobis sed quod, sint officia, voluptas quas ipsum impedit quae.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, laudantium sed laborum aliquid incidunt dicta qui vitae repellendus quam, voluptatum dolorum labore consectetur, necessitatibus aspernatur provident inventore ipsam veniam aliquam.</p>
+        </div>
+        <br><br><br><br><br><br><br><br><br><br>
+        <div class="float3">
+            <img src="001.png" alt="" class="left size">
+            <img src="002.jpg" alt="" class="left size">
+            <img src="003.jpg" alt="" class="left size">
+            <img src="001.png" alt="" class="right size">
+            <img src="002.jpg" alt="" class="right size">
+            <img src="003.jpg" alt="" class="right size">
+        </div>
+        <br><br><br><br><br><br><br><br>
+        <div>
+            <div class="box left">div 태그, float 사용 = inline 처럼 한줄</div>
+            <div class="box left">div 태그, float 사용</div>
+            <div class="box left">div 태그, float 사용</div>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br>
+    <div id="div02">
+        <h3>clearfix 사용하기</h3>
+        <div class="noclearfix">
+            <img src="002.jpg" alt="">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, pariatur veritatis iure maiores et cumque temporibus vitae aperiam non nihil facilis perspiciatis consectetur nemo! Ea, ut consequuntur. Quis, rerum deserunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor blanditiis quae, at nisi ducimus itaque minus? Maxime saepe hic corrupti nobis blanditiis. Vero ducimus aliquid tempora voluptates laboriosam eveniet nisi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem nihil neque doloribus sed dolores nulla, blanditiis dolorem tempore pariatur molestiae vitae sint animi, distinctio minima id? Provident rem magnam soluta!</p>
+        </div>
+        <br style="clear: both;">
+        <br>
+        <div class="clearfix">       
+            <img src="002.jpg" alt="">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quis recusandae ipsam itaque placeat? Sint inventore dolor ab perferendis explicabo laborum quos! Recusandae consequatur aspernatur enim reiciendis maxime tempora eos soluta? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veritatis quam tempora quo, dicta officia cumque praesentium modi, tempore veniam debitis molestias nemo fugit quia nulla perferendis. Ab libero ipsum odit? Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa debitis fugiat, nobis deserunt eligendi modi, incidunt molestiae alias, dolorem quidem delectus? Magni et quas est blanditiis ipsum quasi soluta maiores!</p>
+        </div>
+    </div>
+
+    <h3>clearfix 사용 후 글자 사용</h3>
+
+    
+</body>
+</html>

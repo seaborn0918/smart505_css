@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구글 폰트 사용하기</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang&family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+
+    <style>
+        #div01 .font1 {
+            font-family: 'Gowun Batang', serif;
+            font-size: 24px;
+            color: rgb(128, 128, 0, 0.6);
+        }
+
+        #div01 .font2 {
+            font-family: 'Nanum Myeongjo', serif;
+            font-size: 1.5em;
+            color: aqua;
+        }
+
+        #div03 > .text-start { text-align: start; }
+        #div03 > .text-center { text-align: center; }
+        #div03 > .text-end { text-align: end; }
+        #div03 > .text-justify { text-align: justify; }
+
+        #div04 > .line-height, #div04 > .line-height-px, #div04 > .line-height-pt {
+            font-size: 1.2em;
+        }
+
+        #div04 > .line-height-px {
+            line-height: 100px;
+        }
+
+        #div04 > .line-height-pt {
+            line-height: 500%;
+        }
+
+        #div06 > p {
+            font-family: 'Nanum Myeongjo', serif;
+            font-size: 2em;
+        }
+
+        #div06 > .shadow1 { text-shadow: 5px 5px 3px gray; }
+        #div06 > .shadow2 { text-shadow: -5px -5px 3px gray; }
+        #div06 > .shadow3 { text-shadow: 5px 5px 0px gray; }
+        #div06 > .shadow4 { text-shadow: 0px 0px 3px #ff0000, 0 0 5px #0000ff; color: white }
+
+        #div07 > p { font-size: 2em; }
+        #div07 > .text-transform-none { text-transform: none; }
+        #div07 > .text-transform-cap { text-transform: capitalize; }
+        #div07 > .text-transform-upper { text-transform: uppercase; }
+        #div07 > .text-transform-lower { text-transform: lowercase;     }
+
+        #div08 > p { font-size: 1.5em; }
+        #div08 > .letter { letter-spacing: 0.5em; }
+        #div08 > .word { word-spacing: 0.5em; }
+
+        #div09 > .book1 { list-style-type: none; }
+        #div09 > .book2 { list-style-type: upper-alpha; }
+        #div09 > .list-image { list-style-image: url("001.png"); }
+        #div09 > .position-inside { list-style-position: inside; }
+        #div09 > .position-outside { list-style-position: outside; }
+    </style>
+</head>
+<body>
+    <div id="div01">
+        <h3>구글 폰트 사용하기</h3>
+        <p>구글 폰트를 적용하지 않은 글자</p>
+        <p class="font1">구글 폰트를 적용한 글자 1</p>
+        <p class="font2">구글 폰트를 적용한 글자 2</p>
+    </div>
+
+    <hr>
+
+    <div id="div02">
+        <h3>color 색상 적용하기</h3>
+        <div id="div02-1">
+            <h3>컬러 이름 사용</h3>
+            <p style="color: crimson;">컬러이름으로 색상을 변경할 태그 1</p>
+            <p style="color: darkslategrey;">컬러이름으로 색상을 변경할 태그 2</p>
+        </div>
+
+        <br><br>
+        <div id="div02-2">
+            <h3>hex 방식</h3>
+            <p style="color: #ff00dd;">hex 방식으로 색상을 변경할 태그 1</p>
+            <p style="color: #ddffcc;">hex 방식으로 색상을 변경할 태그 2</p>
+        </div>
+
+        <br><br>
+
+        <div id="div02-3">
+            <h3>rgb/rgba 방식</h3>
+            <p style="color: rgb(125, 52, 209);">rgb 방식으로 색상을 변경할 태그 1</p>
+            <p style="color: rgba(0, 160, 53, 0.7);">rgba 방식으로 색상을 변경할 태그 2</p>
+            <p style="color: rgba(0, 160, 53, 0.3);">rgba 방식으로 색상을 변경할 태그 2</p>
+        </div>
+
+        <br><br>
+
+        <div id="div02-4">
+            <h3>hsl/hsla 방식</h3>
+            <p style="color: hsl(185, 72%, 26%)">hsl 방식으로 색상을 변경할 태그 1</p>
+            <p style="color: hsl(185, 72%, 26%, 0.7)">hsla 방식으로 색상을 변경할 태그 2</p>
+            <p style="color: hsl(185, 72%, 26%, 0.3)">hsla 방식으로 색상을 변경할 태그 2</p>
+        </div>
+    </div>
+
+        <br><br>
+
+        <div id="div03">
+            <h3>text-align 사용하기</h3>
+            <p class="text-start">start 사용 시</p>
+            <p class="text-center">center 사용 시</p>
+            <p class="text-end">end 사용 시</p>
+            <p class="text-justify">justify 사용 시 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus recusandae ea adipisci ratione officia quam iusto quisquam atque, saepe fugiat esse sapiente voluptatum quasi incidunt nisi, tempore eaque. Quae, commodi! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus pariatur inventore itaque recusandae aspernatur molestias ullam velit, aut nisi quae sequi hic provident, error odio exercitationem totam est dolores odit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, quam atque. Fuga, nihil. Consequatur est odio consequuntur accusantium quae voluptatum, quod, deleniti dolorum commodi officiis unde recusandae fuga, vero magnam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quae beatae, quis quia ad amet illo, est expedita dolores eius consectetur qui quos labore maiores, officiis exercitationem quasi distinctio et.</p>
+
+            <p class="text-start">start 사용 시 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus recusandae ea adipisci ratione officia quam iusto quisquam atque, saepe fugiat esse sapiente voluptatum quasi incidunt nisi, tempore eaque. Quae, commodi! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus pariatur inventore itaque recusandae aspernatur molestias ullam velit, aut nisi quae sequi hic provident, error odio exercitationem totam est dolores odit! Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, quam atque. Fuga, nihil. Consequatur est odio consequuntur accusantium quae voluptatum, quod, deleniti dolorum commodi officiis unde recusandae fuga, vero magnam? Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quae beatae, quis quia ad amet illo, est expedita dolores eius consectetur qui quos labore maiores, officiis exercitationem quasi distinctio et.</p>
+        </div>
+
+        <br><br>
+
+        <div id="div04">
+            <h3>line-height 사용하기</h3>
+            <p class="line-height">line-height를 적용하지 않은 태그 1</p>
+            <p class="line-height">line-height를 적용하지 않은 태그 2</p>
+            <p class="line-height-px">line-height를 적용한 태그 1</p>
+            <p class="line-height-pt">line-height를 적용한 태그 2</p>
+        </div>
+        
+        <br>
+
+        <div id="div05">
+            <h3>text-decoration 사용하기</h3>
+            <p style="text-decoration: none;">none 사용 시</p>
+            <p style="text-decoration: underline;">underline 사용 시</p>
+            <p style="text-decoration: overline;">overline 사용 시</p>
+            <p style="text-decoration: line-through;">line-through 사용 시</p>
+        </div>
+        
+        <br>
+
+        <div id="div06">
+            <h3>text-shadow 사용하기</h3>
+            <p>text-shadow 미사용</p>
+            <p class="shadow1">text-shadow 사용 1</p>
+            <p class="shadow2">text-shadow 사용 2</p>
+            <p class="shadow3">text-shadow 사용 3</p>
+            <p class="shadow4">text-shadow 사용 4</p>
+        </div>
+
+        <br>
+
+        <div id="div07">
+            <h3>text-transformation 사용하기</h3>
+            <p class="text-transform-none">NoNe 사용</p>
+            <p class="text-transform-cap">capitalize 사용</p>
+            <p class="text-transform-upper">UpperCase 사용</p>
+            <p class="text-transform-lower">LowerCase 사용</p>
+        </div>
+
+        <br>
+        <div id="div08">
+            <h3>letter, word spacing 사용하기</h3>
+            <p>원본 형태의 글자 및 단어 간격</p>
+            <p class="letter">letter-spacing으로 간격 조절</p>
+            <p class="word">word-spacing으로 간격 조절</p>
+        </div>
+
+        <div id="div09">
+            <h3>list-style-type 사용하기</h3>
+            <ul class="book1">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>Javascript</li>
+            </ul>
+            <ol class="book2">
+                <li>Java</li>
+                <li>SQL</li>
+                <li>JSP</li>
+            </ol>
+            <br>
+            <h3>list-style-image 사용하기</h3>
+            <ul class="list-image">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>Javascript</li>
+            </ul>
+            <br>
+            <h3>list-style-position 사용하기</h3>
+            <ul>
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>Javascript</li>
+            </ul>
+            <br>
+            <ul class="position-inside">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>Javascript</li>
+            </ul>
+            <br>
+            <ul class="position-outside">
+                <li>HTML5</li>
+                <li>CSS3</li>
+                <li>Javascript</li>
+            </ul>
+        </div>
+
+</body>
+</html>
